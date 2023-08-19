@@ -9,7 +9,6 @@
     --nw-secondary: var(--purple-6);
     --nw-toolbar: var(--purple-6);
     --nw-main-area: var(--white-3);
-
 }
 
 * {
@@ -22,10 +21,8 @@
 }
 
 p {
-    padding-bottom: var(--size-1)
+    padding-bottom: var(--size-1);
 }
-
-
 
 .nw-container {
     display: flex;
@@ -39,7 +36,7 @@ p {
 .nw-header {
     background-color: var(--nw-primary);
     height: auto;
-    padding: var(--size-2)
+    padding: var(--size-2);
 }
 
 .nw-toolbar {
@@ -63,7 +60,7 @@ p {
     color: var(--nw-font-color);
     background-color: var(--nw-secondary);
     height: auto;
-    padding: var(--size-2)
+    padding: var(--size-2);
 }
 
 .nw-flex-row {
@@ -86,4 +83,38 @@ p {
     &:hover {
         box-shadow: var(--shadow-5);
     }
+}
+
+.nw-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--size-0);
+
+    border-radius: var(--radius-2);
+    padding: var(--size-fluid-3);
+    box-shadow: var(--shadow-2);
+
+    background: var(--gray-6);
+
+    &:hover {
+        box-shadow: var(--shadow-3);
+    }
+}
+
+.nw-form label {
+    display: block;
+    margin-bottom: var(--size-1);
+}
+
+.nw-form input {
+    padding: var(--size-1);
+    padding-left: var(--size-3);
+    padding-right: var(--size-3);
+    margin-bottom: var(--size-3);
+    border-radius: var(--radius-3);
+    border: solid var(--border-size-1) #32a1ce;
+    /* &:hover {
+        box-shadow: var(--shadow-3);
+      } */
+    cursor: pointer;
 }
