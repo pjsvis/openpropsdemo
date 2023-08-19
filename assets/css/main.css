@@ -20,6 +20,11 @@
     font-size: var(--font-size-1);
 }
 
+ html, body, .nw-container{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
 p {
     padding-bottom: var(--size-1);
 }
@@ -29,8 +34,6 @@ p {
     flex-direction: column;
     height: var(--total-height);
     width: var(--total-width);
-    overflow-x: none;
-    overflow-y: none;
 }
 
 .nw-header {
@@ -113,8 +116,6 @@ p {
     margin-bottom: var(--size-3);
     border-radius: var(--radius-3);
     border: solid var(--border-size-1) #32a1ce;
-    /* &:hover {
-        box-shadow: var(--shadow-3);
-      } */
+
     cursor: pointer;
-}
+}  
