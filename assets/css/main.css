@@ -20,7 +20,9 @@
     font-size: var(--font-size-1);
 }
 
- html, body, .nw-container{
+html,
+body,
+.nw-container {
     overflow-x: hidden;
     overflow-y: hidden;
 }
@@ -92,16 +94,13 @@ p {
     display: flex;
     flex-direction: column;
     row-gap: var(--size-0);
-
-    border-radius: var(--radius-2);
+    width: var(--size-14);
+    border-radius: var(--radius-3);
     padding: var(--size-fluid-3);
-    box-shadow: var(--shadow-2);
+    box-shadow: var(--shadow-3);
 
     background: var(--gray-6);
-
-    &:hover {
-        box-shadow: var(--shadow-3);
-    }
+    border: var(--border-size-1) solid var(--gray-6);
 }
 
 .nw-form label {
@@ -110,6 +109,7 @@ p {
 }
 
 .nw-form input {
+    display: block;
     padding: var(--size-1);
     padding-left: var(--size-3);
     padding-right: var(--size-3);
@@ -118,4 +118,4 @@ p {
     border: solid var(--border-size-1) #32a1ce;
 
     cursor: pointer;
-}  
+}
