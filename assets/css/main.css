@@ -1,0 +1,89 @@
+@import "https://unpkg.com/open-props";
+
+:root {
+    --total-height: 99.999vh;
+    --total-width: 99.999vw;
+
+    --nw-font-color: var(--black-6);
+    --nw-primary: var(--purple-9);
+    --nw-secondary: var(--purple-6);
+    --nw-toolbar: var(--purple-6);
+    --nw-main-area: var(--white-3);
+
+}
+
+* {
+    padding: var(--size-fluid-0);
+    margin: var(--size-fluid-0);
+    box-sizing: border-box;
+    font-family: var(--font-sans);
+    line-height: var(--size-5);
+    font-size: var(--font-size-1);
+}
+
+p {
+    padding-bottom: var(--size-1)
+}
+
+
+
+.nw-container {
+    display: flex;
+    flex-direction: column;
+    height: var(--total-height);
+    width: var(--total-width);
+    overflow-x: none;
+    overflow-y: none;
+}
+
+.nw-header {
+    background-color: var(--nw-primary);
+    height: auto;
+    padding: var(--size-2)
+}
+
+.nw-toolbar {
+    color: var(--nw-font-color);
+    background-color: var(--nw-toolbar);
+    height: auto;
+    padding: var(--size-2);
+}
+
+.nw-main-area {
+    color: var(--nw-font-color);
+    background-color: var(--nw-main-area);
+    flex-grow: 1;
+    padding: var(--size-3);
+    min-height: 100px;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.nw-footer {
+    color: var(--nw-font-color);
+    background-color: var(--nw-secondary);
+    height: auto;
+    padding: var(--size-2)
+}
+
+.nw-flex-row {
+    padding-top: var(--size-1);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    row-gap: var(--size-4);
+    column-gap: var(--size-4);
+}
+
+.nw-card {
+    padding: 1em;
+    box-shadow: var(--shadow-3);
+    max-width: var(--size-14);
+    border-radius: var(--radius-conditional-3);
+    border: var(--border-size-1) solid var(--gray-1);
+
+    &:hover {
+        box-shadow: var(--shadow-5);
+    }
+}

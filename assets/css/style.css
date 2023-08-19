@@ -58,12 +58,18 @@ img {
   height: 100%;
 }
 button {
-  background: var(--blue-4);
-  border: 0px;
+  background: var(--purple-9);
+  border: 1px;
   padding: var(--size-3);
   color: var(--gray-1);
-  border-radius: var(--radius-round);
+  border-radius: var(--radius-round); 
+  cursor: pointer;
 }
+
+button :hover{
+  box-shadow: var(--shadow-3);
+}
+
 section .content {
   --op-gradient-direction: to top left;
   background-image: var(--gradient-9);
