@@ -1,4 +1,5 @@
 @import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
 
 :root {
     --total-height: 99.999vh;
@@ -8,7 +9,7 @@
     --nw-primary: var(--purple-9);
     --nw-secondary: var(--purple-6);
     --nw-toolbar: var(--purple-6);
-    --nw-main-area: var(--white-3);
+    --nw-main-area: var(--grape-1);
 }
 
 * {
@@ -25,6 +26,7 @@ body,
 .nw-container {
     overflow-x: hidden;
     overflow-y: hidden;
+    background: var(--white-3)
 }
 
 p {
@@ -45,6 +47,10 @@ p {
 }
 
 .nw-toolbar {
+    display: flex;
+    flex-direction: row;
+
+    column-gap: var(--size-2);
     color: var(--nw-font-color);
     background-color: var(--nw-toolbar);
     height: auto;
@@ -52,8 +58,10 @@ p {
 }
 
 .nw-main-area {
+    /* display: flex;
+    flex-direction: row; */
     color: var(--nw-font-color);
-    background-color: var(--nw-main-area);
+    background: var(--nw-main-area);
     flex-grow: 1;
     padding: var(--size-3);
     min-height: 100px;
@@ -119,3 +127,56 @@ p {
 
     cursor: pointer;
 }
+
+button {
+    color: var(--grape-1);
+    color: var(--indigo-9);
+    font-size: var(--font-size-1);
+    padding-inline: var(--size-8);
+    padding-block: var(--size-2);
+    border: 1px;
+    border-radius: var(--radius-2);
+    box-shadow: var(--shadow-2);
+    cursor: pointer;
+}
+
+button:active {
+    /* animation: var(--animation-pulse); */
+    transform: matrix(0.95, 0, 0, 0.95, 0, 0);
+}
+
+button.primary {
+    background: var(--indigo-8);
+    color: var(--gray-1);
+}
+
+button.primary:hover {
+    background: var(--indigo-7);
+}
+
+button.secondary {
+    background: var(--orange-6);
+    color: var(--gray-1);
+}
+
+button.secondary:hover {
+    background: var(--orange-5);
+}
+
+button.nw {
+    background: var(--purple-9);
+    color: var(--gray-1);
+}
+
+button.nw:hover {
+    background: var(--purple-8);
+}
+
+/* button.secondary {
+    background: var(--indigo-8);
+
+}
+
+button.secondary:hover {
+    background: var(--indigo-7);
+} */
