@@ -12,14 +12,25 @@
       <div class="nw-toolbar">
         <button class="primary">Primary</button>
         <button class="secondary">Secondary</button>
-        <button class="nw">Warning</button>
-        <button>Danger</button>
+        <button class="natwest">NatWest</button>
+        <button>Default</button>
       </div>
 
       <div class="nw-left-bar"></div>
 
       <div class="nw-main-area">
+
+        <div>
+          <dialog open>
+            <p>Greetings, one and all!</p>
+          
+              <button>OK</button>
+          
+          </dialog>
+        </div>
+
         <h1>Main Area</h1>
+
         <div class="nw-flex-row">
           <p class="nw-card">
             In this tutorial, we demonstrated how to design a UI theme using
@@ -27,8 +38,39 @@
             on GitHub. The design possibilities with Open Props’ CSS custom
             properties are pretty much endless. Check out the Open Props
             documentation to get some inspiration for your next UI design
-            project.
+            project. See
+            <a
+              target="_blank"
+              href="https://stackblitz.com/edit/jit-open-props?file=index.css"
+              >StackBlitz</a
+            >
+            for working examples.
           </p>
+
+          <div class="nw-form">
+            <label
+              >Name:
+              <input class="required" type="text" name="name" required />
+            </label>
+
+            <label
+              >Mobile:
+              <input type="text" name="mobile" />
+            </label>
+            <label
+              >Email:
+              <input type="text" required />
+            </label>
+            <label
+              >File:
+              <input type="file" />
+            </label>
+
+            <button type="submit">Submit</button>
+            <p style="text-align: right">
+              <span class="req">*</span> - Required field
+            </p>
+          </div>
           <p class="nw-card">
             LogRocket is like a DVR for web and mobile apps, recording
             everything that happens in your web app, mobile app, or website.
@@ -37,14 +79,6 @@
             along with application state, log network requests, and
             automatically surface all errors.
           </p>
-          <div class="nw-form">
-            <label for="name">Name: </label>
-            <input type="text" name="name" />
-            <label for="">Mobile: </label>
-            <input type="text" />
-            <label for="">Email: </label>
-            <input type="text" />
-          </div>
           <p class="nw-card">
             In this tutorial, we demonstrated how to design a UI theme using
             Open Props. The simple UI theme used in this tutorial is available

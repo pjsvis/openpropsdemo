@@ -1,182 +1,48 @@
 @import "https://unpkg.com/open-props";
 @import "https://unpkg.com/open-props/normalize.min.css";
+/* @import "https://unpkg.com/open-props/buttons.min.css"; */
+@import "./layout.css";
+@import "./buttons.css";
+@import "./forms.css";
+@import "./card.css";
 
 :root {
-    --total-height: 99.999vh;
-    --total-width: 99.999vw;
+  --total-height: 99.999vh;
+  --total-width: 99.999vw;
 
-    --nw-font-color: var(--black-6);
-    --nw-primary: var(--purple-9);
-    --nw-secondary: var(--purple-6);
-    --nw-toolbar: var(--purple-6);
-    --nw-main-area: var(--grape-1);
+  --nw-font-color: var(--black-6);
+  --nw-primary: var(--purple-9);
+  --nw-secondary: var(--purple-6);
+  --nw-toolbar: var(--purple-6);
+  --nw-main-area: var(--grape-9);
 }
 
 * {
-    padding: var(--size-fluid-0);
-    margin: var(--size-fluid-0);
-    box-sizing: border-box;
-    font-family: var(--font-sans);
-    line-height: var(--size-5);
-    font-size: var(--font-size-1);
+  padding: var(--size-fluid-0);
+  margin: var(--size-fluid-0);
+  box-sizing: border-box;
+  font-family: var(--font-sans);
+  line-height: var(--font-lineheight-2);
+  font-size: var(--font-size-1);
 }
 
 html,
-body,
-.nw-container {
-    overflow-x: hidden;
-    overflow-y: hidden;
-    background: var(--white-3)
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background: var(--grape-9);
 }
 
 p {
-    padding-bottom: var(--size-1);
+  padding-bottom: var(--size-1);
 }
 
-.nw-container {
-    display: flex;
-    flex-direction: column;
-    height: var(--total-height);
-    width: var(--total-width);
+/* TODO: Try and change this to a left-bar */
+.action-sheet {
+  width: var(--size-14);
+  animation: var(--animation-slide-out-down) forwards;
+
+  &.open {
+    animation: var(--animation-slide-in-up) forwards;
+  }
 }
-
-.nw-header {
-    background-color: var(--nw-primary);
-    height: auto;
-    padding: var(--size-2);
-}
-
-.nw-toolbar {
-    display: flex;
-    flex-direction: row;
-
-    column-gap: var(--size-2);
-    color: var(--nw-font-color);
-    background-color: var(--nw-toolbar);
-    height: auto;
-    padding: var(--size-2);
-}
-
-.nw-main-area {
-    /* display: flex;
-    flex-direction: row; */
-    color: var(--nw-font-color);
-    background: var(--nw-main-area);
-    flex-grow: 1;
-    padding: var(--size-3);
-    min-height: 100px;
-    overflow-x: auto;
-    overflow-y: auto;
-}
-
-.nw-footer {
-    color: var(--nw-font-color);
-    background-color: var(--nw-secondary);
-    height: auto;
-    padding: var(--size-2);
-}
-
-.nw-flex-row {
-    padding-top: var(--size-1);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    row-gap: var(--size-4);
-    column-gap: var(--size-4);
-}
-
-.nw-card {
-    padding: 1em;
-    box-shadow: var(--shadow-3);
-    max-width: var(--size-14);
-    border-radius: var(--radius-conditional-3);
-    border: var(--border-size-1) solid var(--gray-1);
-
-    &:hover {
-        box-shadow: var(--shadow-5);
-    }
-}
-
-.nw-form {
-    display: flex;
-    flex-direction: column;
-    row-gap: var(--size-0);
-    width: var(--size-14);
-    border-radius: var(--radius-3);
-    padding: var(--size-fluid-3);
-    box-shadow: var(--shadow-3);
-
-    background: var(--gray-6);
-    border: var(--border-size-1) solid var(--gray-6);
-}
-
-.nw-form label {
-    display: block;
-    margin-bottom: var(--size-1);
-}
-
-.nw-form input {
-    display: block;
-    padding: var(--size-1);
-    padding-left: var(--size-3);
-    padding-right: var(--size-3);
-    margin-bottom: var(--size-3);
-    border-radius: var(--radius-3);
-    border: solid var(--border-size-1) #32a1ce;
-
-    cursor: pointer;
-}
-
-button {
-    color: var(--grape-1);
-    color: var(--indigo-9);
-    font-size: var(--font-size-1);
-    padding-inline: var(--size-8);
-    padding-block: var(--size-2);
-    border: 1px;
-    border-radius: var(--radius-2);
-    box-shadow: var(--shadow-2);
-    cursor: pointer;
-}
-
-button:active {
-    /* animation: var(--animation-pulse); */
-    transform: matrix(0.95, 0, 0, 0.95, 0, 0);
-}
-
-button.primary {
-    background: var(--indigo-8);
-    color: var(--gray-1);
-}
-
-button.primary:hover {
-    background: var(--indigo-7);
-}
-
-button.secondary {
-    background: var(--orange-6);
-    color: var(--gray-1);
-}
-
-button.secondary:hover {
-    background: var(--orange-5);
-}
-
-button.nw {
-    background: var(--purple-9);
-    color: var(--gray-1);
-}
-
-button.nw:hover {
-    background: var(--purple-8);
-}
-
-/* button.secondary {
-    background: var(--indigo-8);
-
-}
-
-button.secondary:hover {
-    background: var(--indigo-7);
-} */

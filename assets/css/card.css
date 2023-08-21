@@ -1,0 +1,9 @@
+dialog, .nw-card {
+  padding: 1em;
+  box-shadow: var(--shadow-3);
+  border-radius: var(--radius-conditional-3);
+  border: var(--border-size-1) solid var(--gray-1);
+  &:hover {
+    box-shadow: var(--shadow-5);
+  }
+}

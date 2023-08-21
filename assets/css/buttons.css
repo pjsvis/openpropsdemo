@@ -1,0 +1,94 @@
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
+
+button {
+  background: var(--gray-3);
+  text-shadow: var(--gray-2);
+  color: var(--indigo-9);
+  padding-inline: var(--size-6);
+  padding-block: var(--size-2);
+  border: 1px;
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-2);
+  cursor: pointer;
+  font-size: var(--font-size-1);
+  /* text-transform: uppercase; */
+}
+
+button:active {
+  transform: matrix(0.95, 0, 0, 0.95, 0, 0);
+}
+
+button[type="submit"] {
+  background: var(--indigo-8);
+  text-shadow: var(--indigo-7);
+  color: var(--gray-2);
+}
+
+button[type="submit"]:hover{
+    background: var(--indigo-7);
+}
+
+button.primary {
+  background: var(--indigo-8);
+  text-shadow: var(--indigo-7);
+  color: var(--gray-2);
+}
+
+button.primary:hover {
+  background: var(--indigo-7);
+}
+
+button.secondary {
+  background: var(--orange-6);
+  text-shadow: var(--orange-5);
+  color: var(--gray-1);
+}
+
+button.secondary:hover {
+  background: var(--orange-5);
+}
+
+button.natwest {
+  background: var(--purple-9);
+  text-shadow: var(--purple-5);
+  color: var(--gray-1);
+}
+
+button.natwest:hover {
+  background: var(--purple-8);
+}
+
+/* File Selector button */
+input[type="file"] {
+  padding: 0.2em 0.4em;
+  border-radius: var(--radius-0);
+  background-color: var(--grape-9);
+  transition: 1s;
+}
+
+input[type="file"]::file-selector-button {
+  background: var(--indigo-8);
+  text-shadow: var(--indigo-7);
+  color: var(--gray-2);
+  font-size: var(--font-size-1);
+  padding-inline: var(--size-3);
+  padding-block: var(--size-2);
+  border: 1px;
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-2);
+  cursor: pointer;
+  margin-right: var(--size-3);
+}
+
+input[type="file"]::file-selector-button:hover {
+  background: var(--indigo-7);
+}
+
+input[type="file"]::file-selector-button:active {
+  transform: matrix(0.95, 0, 0, 0.95, 0, 0);
+}
+
+
+
+

@@ -1,0 +1,47 @@
+.nw-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--size-0);
+  /* width: var(--size-14); */
+  border-radius: var(--radius-3);
+  padding: var(--size-fluid-3);
+  box-shadow: var(--shadow-3);
+
+  background: var(--grape-1);
+  border: var(--border-size-1) solid var(--gray-1);
+
+  &:hover {
+    box-shadow: var(--shadow-5);
+  }
+}
+
+input {
+  background: var(--grape-9);
+  display: block;
+  padding: var(--size-1);
+  padding-inline: var(--size-3);
+  padding-block: var(--size-1);
+  margin-bottom: var(--size-3);
+  border-radius: var(--radius-3);
+  border: solid var(--border-size-1) #32a1ce;
+  box-shadow: var(--inner-shadow-4);
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+/* Ref: https://bobbyhadz.com/blog/mark-input-fields-as-required-using-asterisk */
+input[required] {
+  background-image: radial-gradient(red 25%, transparent 26%),
+    radial-gradient(red 25%, transparent 26%);
+  background-size: 2.2em 2.2em;
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+.req {
+  color: calc(--red-09);
+}
