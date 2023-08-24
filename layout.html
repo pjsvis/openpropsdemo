@@ -19,13 +19,11 @@
       <div class="nw-left-bar"></div>
 
       <div class="nw-main-area">
-
         <div>
           <dialog open>
             <p>Greetings, one and all!</p>
-          
-              <button>OK</button>
-          
+
+            <button>OK</button>
           </dialog>
         </div>
 
@@ -46,8 +44,21 @@
             >
             for working examples.
           </p>
+          <p>
+            <button class="btn-vis">Hello</button>
+          </p>
 
           <div class="nw-form">
+            <!-- TODO: test CODROPS file input style -->
+            <label for="file">
+              Choose a file XXX
+              <input type="file" name="file" id="file" class="inputfile" />
+            </label>
+
+            <label
+              >File:
+              <input type="file" />
+            </label>
             <label
               >Name:
               <input class="required" type="text" name="name" required />
@@ -60,10 +71,6 @@
             <label
               >Email:
               <input type="text" required />
-            </label>
-            <label
-              >File:
-              <input type="file" />
             </label>
 
             <button type="submit">Submit</button>

@@ -16,47 +16,47 @@ button {
 }
 
 button:active {
-  transform: matrix(0.95, 0, 0, 0.95, 0, 0);
+  transform: matrix(0.97, 0, 0, 0.97, 0, 0);
 }
 
 button[type="submit"] {
   background: var(--indigo-8);
   text-shadow: var(--indigo-7);
   color: var(--gray-2);
-}
 
-button[type="submit"]:hover{
+  &:hover {
     background: var(--indigo-7);
+  }
 }
 
 button.primary {
   background: var(--indigo-8);
   text-shadow: var(--indigo-7);
   color: var(--gray-2);
-}
 
-button.primary:hover {
-  background: var(--indigo-7);
+  &:hover {
+    background: var(--indigo-7);
+  }
 }
 
 button.secondary {
   background: var(--orange-6);
   text-shadow: var(--orange-5);
   color: var(--gray-1);
-}
 
-button.secondary:hover {
-  background: var(--orange-5);
+  & :hover {
+    background: var(--orange-5);
+  }
 }
 
 button.natwest {
   background: var(--purple-9);
   text-shadow: var(--purple-5);
   color: var(--gray-1);
-}
 
-button.natwest:hover {
-  background: var(--purple-8);
+  &:hover {
+    background: var(--purple-8);
+  }
 }
 
 /* File Selector button */
@@ -65,6 +65,13 @@ input[type="file"] {
   border-radius: var(--radius-0);
   background-color: var(--grape-9);
   transition: 1s;
+
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
 }
 
 input[type="file"]::file-selector-button {
@@ -89,6 +96,30 @@ input[type="file"]::file-selector-button:active {
   transform: matrix(0.95, 0, 0, 0.95, 0, 0);
 }
 
+ input[type="file"] {
+  font-size: 1.25em;
+  font-weight: 700;
+  color: white;
+  background-color: black;
+  display: inline-block;
+}
 
+label > input[type="file"]:focus ,
+label > input[type="file"] + label:hover {
+  background-color: red;
+}
 
+.btn-vis {
+  /* --color-hue: var(--hue-indigo); */
+  --color-hue: var(--purple-6);
+  --_bg: linear-gradient(var(--color-5), var(--color-7));
+  --_border: var(--color-6);
+  --_text: var(--color-0);
+  --_ink-shadow: 0 1px 0 var(--color-9);
+  --_size: var(--font-size-3);
+
+  & svg {
+    fill: var(--text-1);
+  }
+}
 
