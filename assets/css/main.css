@@ -10,10 +10,10 @@
   --total-height: 99.999vh;
   --total-width: 99.999vw;
 
-  --nw-font-color: var(--black-6);
+  --nw-font-color: var(--gray-9);
   --nw-primary: var(--purple-9);
   --nw-secondary: var(--purple-6);
-  --nw-toolbar: var(--purple-6);
+  --nw-toolbar: var(--gray-1);
   --nw-main-area: var(--grape-9);
 }
 

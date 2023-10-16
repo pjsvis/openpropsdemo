@@ -1,4 +1,4 @@
-.nw-container {
+.nw-layout-container {
   display: flex;
   flex-direction: column;
   height: var(--total-height);
@@ -15,7 +15,47 @@
   padding: var(--size-2);
 }
 
-.nw-toolbar {
+.nw-content-sidebars-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.nw-content-container {
+  color: var(--nw-font-color);
+  background: var(--grape-9);
+  flex-grow: 1;
+  /* padding: var(--size-3); */
+  min-height: 100px;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+/* main-area scroll bar */
+.nw-content-container::-webkit-scrollbar {
+  width: 1em;
+}
+
+.nw-content-container::-webkit-scrollbar-track {
+  background-color: var(--gray-2);
+  border-radius: 100px;
+}
+
+/* Contains nw-toolbar and nw-content */
+.nw-content-container::-webkit-scrollbar-thumb {
+  background-color: var(--gray-6);
+  border-radius: 100px;
+}
+
+
+/**
+ Container for content 
+ */
+.nw-content {
+  padding: var(--size-2);
+}
+
+.nw-content-toolbar {
   display: flex;
   flex-direction: row;
 
@@ -25,31 +65,6 @@
   height: auto;
   padding: var(--size-2);
   box-shadow: var(--shadow-3);
-}
-
-.nw-main-area {
-  color: var(--nw-font-color);
-  background: var(--grape-9);
-  flex-grow: 1;
-  padding: var(--size-3);
-  min-height: 100px;
-  overflow-x: auto;
-  overflow-y: auto;
-}
-
-/* main-area scroll bar */
-.nw-main-area::-webkit-scrollbar {
-  width: 1em;
-}
-
-.nw-main-area::-webkit-scrollbar-track {
-  background-color: var(--gray-2);
-  border-radius: 100px;
-}
-
-.nw-main-area::-webkit-scrollbar-thumb {
-  background-color: var(--gray-6);
-  border-radius: 100px;
 }
 
 /* end main-area-scroll bar */
@@ -68,4 +83,33 @@
   align-content: flex-start;
   row-gap: var(--size-4);
   column-gap: var(--size-4);
+}
+
+.nw-left-bar {
+  /* border: 1px solid silver; */
+  width: var(--size-content-1);
+  padding: var(--size-2);
+  box-shadow: var(--shadow-5);
+  /* display: none; */
+}
+.nw-left-bar ol,
+.nw-left-bar ul {
+  padding-inline-start: var(--size-4);
+}
+
+.nw-right-bar {
+  width: var(--size-content-1);
+  /* border: 1px solid silver; */
+  padding: var(--size-2);
+  box-shadow: var(--shadow-5);
+  /* display: none; */
+}
+
+.nw-right-bar ol,
+.nw-right-bar ul {
+  padding-inline-start: var(--size-4);
+}
+
+code {
+  font-family: var(--font-mono);
 }

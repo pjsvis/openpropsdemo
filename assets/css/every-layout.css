@@ -1,0 +1,200 @@
+@import 'https://unpkg.com/open-props';
+
+:root {
+  font-family: var(--font-sans);
+  --measure: 60ch;
+  --font-size-base: 1rem;
+  --font-size-biggish: 1.75rem;
+  --font-size-big: 2.25rem;
+  background: var(--gray-0);
+}
+
+/* elements */
+
+h3 {
+  font-size: var(--font-size-biggish);
+}
+
+h2 {
+  font-size: var(--font-size-big);
+}
+
+/* utilities */
+
+.font-size\:base {
+  font-size: var(--font-size-base) !important;
+}
+
+.font-size\:biggish {
+  font-size: var(--font-size-biggish) !important;
+}
+
+.font-size\:big {
+  font-size: var(--font-size-big) !important;
+}
+
+/* stack */
+.o-stack > * + * {
+  margin-block-start: var(--size-3);
+}
+
+.o-stack-repeat * + * {
+  margin-block-start: 0.5rem;
+}
+
+.o-block {
+  display: block;
+}
+
+/* box */
+.o-box {
+  padding: var(--size-1);
+  border: var(--border-size-1) solid;
+}
+
+.o-box * {
+  color: inherit;
+}
+
+.o-box.invert {
+  color: var(--color-light);
+  background-color: var(--color-dark);
+}
+
+/* center */
+.o-center {
+  box-sizing: content-box;
+  margin-inline: auto;
+  max-inline-size: var(--measure);
+}
+
+/* cluster */
+.o-cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--size-3, 1rem);
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* sidebar */
+.o-with-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s1);
+}
+
+.o-with-sidebar > :first-child {
+  flex-grow: 1;
+}
+
+.o-with-sidebar > :last-child {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-inline-size: 50%;
+}
+
+/* utilities */
+.u-size-content-1 {
+  max-inline-size: var(--size-content-1);
+}
+
+.u-size-content-2 {
+  max-inline-size: var(--size-content-2);
+}
+
+.u-size-content-3 {
+  max-inline-size: var(--size-content-3);
+}
+
+.u-text-shadow{
+  text-shadow: 0 1px 0 var(--blue-2);
+}
+
+
+button.blue {
+  color: var(--purple-9);
+  background-color: var(--purple-9);
+  border: 1px solid var(--purple-1);
+  text-shadow: 0 1px 0 var(--purple-1);
+  padding-block: var(--size-2);
+  padding-inline: var(--size-2);
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-5);
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--purple-8);
+  }
+
+  &:active {
+    transform: matrix(0.97, 0, 0, 0.97, 0, 0);
+  }
+}
+
+
+input[type="file"]::file-selector-button {
+  background: var(--indigo-8);
+  text-shadow: var(--indigo-7);
+  color: var(--gray-2);
+  font-size: var(--font-size-1);
+  padding-inline: var(--size-3);
+  padding-block: var(--size-2);
+  border: 1px;
+  border-radius: var(--radius-2);
+  box-shadow: var(--shadow-2);
+  cursor: pointer;
+  margin-right: var(--size-3);
+  background: var(--purple-9);
+}
+
+input[type="file"]::file-selector-button:hover {
+  background: var(--purple-8);
+}
+
+/* components */
+/* [class^="c-"],
+[class*=" c-"] {
+  outline: var(--size-1) var(--cyan-5);
+} */
+
+/* Layouts */
+/* [class^="l-"],
+[class*=" i-"] {
+  outline: var(--border-size-1) solid var(--orange-5);
+  border-radius: var(--radius-4);
+} */
+
+.u-mt-1{
+  margin-top:var(--size-1)
+}
+
+/* Debugging */
+/*
+
+  DEBUG CHILDREN
+  Docs: http://tachyons.io/docs/debug/
+
+  Just add the debug class to any element to see outlines on its
+  children.
+
+*/
+/* .debug * { outline: 1px solid gold; }
+.debug-white * { outline: 1px solid white; }
+.debug-black * { outline: 1px solid black; } */
+/*
+
+   DEBUG GRID
+   http://tachyons.io/docs/debug-grid/
+
+   Can be useful for debugging layout issues
+   or helping to make sure things line up perfectly.
+   Just tack one of these classes onto a parent element.
+
+*/
+/* .debug-grid { background: transparent url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAFElEQVR4AWPAC97/9x0eCsAEPgwAVLshdpENIxcAAAAASUVORK5CYII= ) repeat top left; }
+.debug-grid-16 { background: transparent url( data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAMklEQVR4AWOgCLz/b0epAa6UGuBOqQHOQHLUgFEDnAbcBZ4UGwDOkiCnkIhdgNgNxAYAiYlD+8sEuo8AAAAASUVORK5CYII= ) repeat top left; }
+.debug-grid-8-solid { background: white url( data:image/gif;base64,R0lGODdhCAAIAPEAAADw/wDx/////wAAACwAAAAACAAIAAACDZQvgaeb/lxbAIKA8y0AOw== ) repeat top left; }
+.debug-grid-16-solid { background: white url( data:image/gif;base64,R0lGODdhEAAQAPEAAADw/wDx/xXy/////ywAAAAAEAAQAAACIZyPKckYDQFsb6ZqD85jZ2+BkwiRFKehhqQCQgDHcgwEBQA7 ) repeat top left; } */
+/* Uncomment out the line below to help debug layout issues */
+@import './_debug';
